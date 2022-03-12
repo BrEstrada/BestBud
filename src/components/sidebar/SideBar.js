@@ -23,8 +23,7 @@ function SideBar(props) {
                 </ListGroup.Item>
                 <ListGroup.Item className="nav-item">
                     <Link className="nav-link" to="/dashboard">
-                        <IoGridOutline />
-                        Products
+                        <IoGridOutline /> Products
                     </Link>
                 </ListGroup.Item>
                 <ListGroup.Item className="nav-item">
