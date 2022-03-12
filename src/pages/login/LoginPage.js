@@ -22,22 +22,22 @@ function LoginPage(props) {
         <>
             <AppBar />
 
-            <nav>
+            {/* <nav>
                 <ul>
                     <li>
-                        <Link to="/">Login Page</Link>
+                        <Link to="/">Login</Link>
                     </li>
                     <li>
                         <Link to="/dashboard">Dashboard Page</Link>
                     </li>
                 </ul>
-            </nav>
+            </nav> */}
 
             <Container>
                 <Row className="mt-5">
                     <Col className="bg-dark text-light p-4">
                         <h1 className="fs-1">Welcome to Best Bud,</h1>
-                        <p className="fs-3 mb-3">Please Login.</p>
+                        <p className="fs-3 mb-3">Please Login Bud</p>
                         <img alt="" src={LoginBanner} />
                     </Col>
                     <Col className="bg-light py-5">
@@ -61,7 +61,7 @@ function LoginPage(props) {
                                     required
                                 />
                             </Form.Group>
-                            <Button variant="primary" type="submit">
+                            <Button variant="success" type="submit">
                                 Submit
                             </Button>
                         </Form>
