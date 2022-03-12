@@ -27,7 +27,7 @@ function LoginPage(props) {
                     <Col className="bg-dark text-light p-4">
                         <h1 className="fs-1">Welcome to Best Bud,</h1>
                         <p className="fs-3 mb-3">Please Login Bud</p>
-                        <img alt="" src={LoginBanner} />
+                        <img alt="Login Banner" src={LoginBanner} />
                     </Col>
                     <Col className="bg-light py-5">
                         <Form onSubmit={onHandleSubmit}>
