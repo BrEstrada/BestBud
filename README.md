@@ -6,7 +6,11 @@ Dashboard application for Best Bud website created using React by Meta/Facebook.
 
 ## Bootstrap 5
 
+Built using [Bootstrap 5](https://getbootstrap.com/) CSS Styling and framework components.
+
 ## React-Bootstrap
+
+Uses [React-Bootstrap](https://react-bootstrap.github.io/) prebuilt components. 
 
 ## React Router V6
 
