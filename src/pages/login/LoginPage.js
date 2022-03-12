@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 
@@ -21,17 +21,6 @@ function LoginPage(props) {
     return (
         <>
             <AppBar />
-
-            {/* <nav>
-                <ul>
-                    <li>
-                        <Link to="/">Login</Link>
-                    </li>
-                    <li>
-                        <Link to="/dashboard">Dashboard Page</Link>
-                    </li>
-                </ul>
-            </nav> */}
 
             <Container>
                 <Row className="mt-5">
