@@ -4,7 +4,8 @@ const AppBarStyles = styled.nav`
     box-shadow: 0 0 2px 1px grey;
     padding: 1rem;
     /* height: 64px; */
-    background-color: ${(props) => props.bgcolor || 'transparent'};
+    background-color: ${(props) => props.bgcolor || '#transparent'};
+    color: ${(props) => props.color || '#black'};
 `;
 
 const AppBarItems = styled.ul`

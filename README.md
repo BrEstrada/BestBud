@@ -1,17 +1,13 @@
-# React With Styled Components
+# [Best Bud React App Dashboard](https://competent-borg-fd212d.netlify.app/)
 
--   Configure styled components
--   Extensions for styled components snippets..
--   Create a global stylesheet..
--   Styled components you use createGlobalStyle
+## Powered by React
 
-```js
-import { createGlobalStyle } from 'styled-components';
+Dashboard application for Best Bud website created using React by Meta/Facebook.
 
-const GlobalStyles = createGlobalStyle`
-    body {
-        background-color: red;
-    }
-`;
-export { GlobalStyles };
-```
+## React Router V6
+
+Uses [React Router](https://reactrouter.com/docs/en/v6/getting-started/overview#overview) for 'page' loading/navigation.
+
+## React Icons Library
+
+Uses the [React Icons](https://react-icons.github.io/react-icons/) library for .svg icons across the site.

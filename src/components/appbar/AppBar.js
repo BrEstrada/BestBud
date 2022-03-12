@@ -9,25 +9,28 @@ import {
 
 import { AppBarItems, AppBarStyles, AppBarItem } from './styles';
 import { IconButton } from './../../ui/buttons';
+import { Brand } from '../branding';
 
 function AppBar(props) {
     return (
-        <AppBarStyles>
+        <AppBarStyles bgcolor="#212121" color="white">
             <AppBarItems>
-                <AppBarItem>Best Bud</AppBarItem>
+                <AppBarItem>
+                    <Brand iconSize="2.5rem" />
+                </AppBarItem>
                 <AppBarItem>
                     <IconButton>
-                        <IoMailOutline size="1.125rem" color="grey" />
+                        <IoMailOutline size="1.125rem" color="white" />
                     </IconButton>
 
                     <IconButton>
-                        <IoNotificationsOutline size="1.125rem" color="grey" />
+                        <IoNotificationsOutline size="1.125rem" color="white" />
                     </IconButton>
                     <IconButton>
-                        <IoPersonCircleOutline size="2rem" color="grey" />
+                        <IoPersonCircleOutline size="2rem" color="white" />
                     </IconButton>
                     <IconButton>
-                        <IoEllipsisVertical size="1.125rem" color="grey" />
+                        <IoEllipsisVertical size="1.125rem" color="white" />
                     </IconButton>
                 </AppBarItem>
             </AppBarItems>
