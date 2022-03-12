@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function LoginPage(props) {
     return (
         <>
-            {/* <nav>
+            <nav>
                 <ul>
                     <li>
                         <Link to="/">Login Page</Link>
@@ -13,7 +13,7 @@ function LoginPage(props) {
                         <Link to="/dashboard">Dashboard Page</Link>
                     </li>
                 </ul>
-            </nav> */}
+            </nav>
             <header>
                 <h1>Login Page</h1>
             </header>
