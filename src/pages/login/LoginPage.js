@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { auth } from './../../libs/firebase';
 
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 
@@ -9,6 +10,9 @@ import LoginBanner from './../../assets/images/login-banner.png';
 function LoginPage(props) {
     let navigation = useNavigate();
 
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
     // JS
     function onHandleSubmit(e) {
         e.preventDefault();
@@ -16,7 +20,8 @@ function LoginPage(props) {
         // firebase auth signInWithEmailAndPassword
         // true -> Dashboard
         // false -> resubmit
-        navigation('/dashboard');
+        // navigation('/dashboard');
+        console.log(email, password);
     }
     return (
         <>
@@ -31,23 +36,27 @@ function LoginPage(props) {
                     </Col>
                     <Col className="bg-light py-5">
                         <Form onSubmit={onHandleSubmit}>
-                            <Form.Group className="mb-3" controlId="email">
+                            <Form.Group className="mb-3">
                                 <Form.Label>Email address</Form.Label>
                                 <Form.Control
                                     id="email"
                                     type="email"
                                     placeholder="Email@example.com"
                                     required
+                                    onChange={(e) => setEmail(e.target.value)}
                                 />
                             </Form.Group>
 
-                            <Form.Group className="mb-3" controlId="password">
+                            <Form.Group className="mb-3">
                                 <Form.Label>Password</Form.Label>
                                 <Form.Control
                                     id="password"
                                     type="password"
                                     placeholder="Password"
                                     required
+                                    onChange={(e) =>
+                                        setPassword(e.target.value)
+                                    }
                                 />
                             </Form.Group>
                             <Button variant="success" type="submit">

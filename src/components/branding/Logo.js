@@ -80,7 +80,7 @@ const Logo = (props) => (
                     textAnchor="middle"
                 ></path>
                 <g
-                    ariaLabel="BUD"
+                    aria-label="BUD"
                     fontSize="23.862"
                     transform="scale(1.22248 .81801)"
                     style={{
