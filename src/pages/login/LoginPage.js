@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { auth } from './../../libs/firebase';
+// import { useNavigate } from 'react-router-dom';
+// import { auth } from './../../libs/firebase';
 
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 
@@ -8,7 +8,7 @@ import { AppBar } from './../../components/appbar';
 import LoginBanner from './../../assets/images/login-banner.png';
 
 function LoginPage(props) {
-    let navigation = useNavigate();
+    // let navigation = useNavigate();
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
