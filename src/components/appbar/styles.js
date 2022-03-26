@@ -16,6 +16,9 @@ const AppBarItems = styled.ul`
 
 const AppBarItem = styled.li``;
 
-const AppBarItemGroup = styled.li``;
+const AppBarItemGroup = styled.li`
+    display: flex;
+    gap: 0.25rem;
+`;
 
 export { AppBarStyles, AppBarItems, AppBarItem, AppBarItemGroup };

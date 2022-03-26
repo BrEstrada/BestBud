@@ -1,27 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { AppBar } from './../../components/appbar';
-import { Panels } from '../../components/panels';
+import { Outlet, useNavigate } from 'react-router-dom';
+
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from 'libs/firebase';
 
 import { Container, Row, Col } from 'react-bootstrap';
 import { SideBar } from '../../components/sidebar';
+import { DashboardPageStyles } from './styles';
 
 function DashboardPage(props) {
-    return (
-        <>
-            <AppBar />
+    const [isUser, setIsUser] = useState(false);
+    const navigator = useNavigate();
 
-            <Container fluid>
-                <Row>
-                    <Col md={2}>
-                        <SideBar />
-                    </Col>
-                    <Col>
-                        <Panels />
-                    </Col>
-                </Row>
-            </Container>
-        </>
-    );
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            setIsUser(true);
+        } else {
+            setIsUser(false);
+            // login page
+            navigator('/');
+        }
+    });
+
+    if (isUser) {
+        return (
+            <>
+                <AppBar />
+
+                <Container fluid>
+                    <Row>
+                        <Col lg="3" md="3">
+                            <DashboardPageStyles>
+                                <SideBar />
+                            </DashboardPageStyles>
+                        </Col>
+                        <Col>
+                            <Outlet />
+                        </Col>
+                    </Row>
+                </Container>
+            </>
+        );
+    } else {
+        return null;
+    }
 }
 
 export default DashboardPage;

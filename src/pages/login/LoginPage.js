@@ -61,8 +61,9 @@ function LoginPage(props) {
                                     <Form.Label>Email address</Form.Label>
                                     <Form.Control
                                         id="email"
-                                        type="text"
+                                        type="email"
                                         placeholder="Email@example.com"
+                                        required
                                         onChange={(e) =>
                                             setEmail(e.target.value)
                                         }
@@ -73,8 +74,9 @@ function LoginPage(props) {
                                     <Form.Label>Password</Form.Label>
                                     <Form.Control
                                         id="password"
-                                        type="text"
+                                        type="password"
                                         placeholder="Password"
+                                        required
                                         onChange={(e) =>
                                             setPassword(e.target.value)
                                         }
