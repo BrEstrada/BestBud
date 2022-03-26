@@ -12,6 +12,7 @@ import {
     IoReaderOutline,
     IoCodeOutline,
     IoAdd,
+    IoPencil,
 } from 'react-icons/io5';
 
 const ProductOptionStyles = styled.div``;
@@ -27,6 +28,11 @@ function ProductOptions(props) {
             <ListGroup.Item className="nav-item">
                 <Link className="nav-link" to="add">
                     <IoAdd /> Add Products
+                </Link>
+            </ListGroup.Item>
+            <ListGroup.Item className="nav-item">
+                <Link className="nav-link" to="edit">
+                    <IoPencil /> Edit Products
                 </Link>
             </ListGroup.Item>
             <ListGroup.Item className="nav-item">

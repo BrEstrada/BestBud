@@ -1,4 +1,8 @@
-import { AddProductPanel, AllProductsPanel } from 'components/panels';
+import {
+    AddProductPanel,
+    AllProductsPanel,
+    EditProductsPanel,
+} from 'components/panels';
 import { Routes, Route } from 'react-router-dom';
 
 import { LoginPage, DashboardPage, PageNotFound } from './pages';
@@ -16,6 +20,10 @@ function App() {
                     <Route
                         path="add"
                         element={<AddProductPanel title="Add New Product" />}
+                    />
+                    <Route
+                        path="edit"
+                        element={<EditProductsPanel title="Edit Products" />}
                     />
                 </Route>
                 <Route path="*" element={<PageNotFound />} />

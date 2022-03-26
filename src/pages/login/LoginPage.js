@@ -63,7 +63,6 @@ function LoginPage(props) {
                                         id="email"
                                         type="email"
                                         placeholder="Email@example.com"
-                                        required
                                         onChange={(e) =>
                                             setEmail(e.target.value)
                                         }
@@ -76,7 +75,6 @@ function LoginPage(props) {
                                         id="password"
                                         type="password"
                                         placeholder="Password"
-                                        required
                                         onChange={(e) =>
                                             setPassword(e.target.value)
                                         }
