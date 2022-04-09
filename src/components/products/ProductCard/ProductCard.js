@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductCardPlaceholder from './../../assets/images/ProductCardImage.png';
+import ProductCardPlaceholder from './../../../assets/images/ProductCardImage.png';
 
 function ProductCard(props) {
     return (
