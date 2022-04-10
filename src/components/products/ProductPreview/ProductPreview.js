@@ -1,12 +1,30 @@
 import React from 'react';
 
-import { ProductPreviewStyles } from './styles';
+import {
+    ProductPreviewStyles,
+    ProductImage,
+    ProductPrice,
+    ProductName,
+    ProductDescription,
+} from './styles';
 
-function ProductPreview({ children, ...props }) {
+import PlaceHolderImage from 'assets/images/ProductCardImage.png';
+
+function ProductPreview({ children, productName, ...props }) {
     return (
         <ProductPreviewStyles {...props}>
-            <h2>ProductPreview Component</h2>
-            {children}
+            <ProductImage>
+                <img src={PlaceHolderImage} alt="Product Placeholder" />
+            </ProductImage>
+            <ProductName>{productName}</ProductName>
+            <ProductPrice>price</ProductPrice>
+            <ProductDescription>
+                Worldlets citizens of distant epochs the carbon in our apple
+                pies Euclid Drake Equation Vangelis? White dwarf another world
+                made in the interiors of collapsing stars realm of the galaxies
+                extraordinary claims require extraordinary evidence a mote of
+                dust suspended in a sunbeam.
+            </ProductDescription>
         </ProductPreviewStyles>
     );
 }
