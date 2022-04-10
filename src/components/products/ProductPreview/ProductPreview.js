@@ -10,14 +10,14 @@ import {
 
 import PlaceHolderImage from 'assets/images/ProductCardImage.png';
 
-function ProductPreview({ children, productName, ...props }) {
+function ProductPreview({ children, productName, productPrice, ...props }) {
     return (
         <ProductPreviewStyles {...props}>
             <ProductImage>
                 <img src={PlaceHolderImage} alt="Product Placeholder" />
             </ProductImage>
             <ProductName>{productName}</ProductName>
-            <ProductPrice>price</ProductPrice>
+            <ProductPrice>${productPrice}</ProductPrice>
             <ProductDescription>
                 Worldlets citizens of distant epochs the carbon in our apple
                 pies Euclid Drake Equation Vangelis? White dwarf another world

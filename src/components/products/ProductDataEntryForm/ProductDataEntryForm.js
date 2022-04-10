@@ -12,7 +12,12 @@ import { Label, Input } from 'ui/forms';
 import { ProductImageDropBox } from '../ProductImageDropBox';
 import { TextArea } from 'ui/forms/textarea';
 
-function ProductDataEntryForm({ children, handleProductName, ...props }) {
+function ProductDataEntryForm({
+    children,
+    handleProductName,
+    handleProductPrice,
+    ...props
+}) {
     return (
         <ProductDataEntryFormStyles {...props}>
             <ProductImage>
@@ -32,7 +37,12 @@ function ProductDataEntryForm({ children, handleProductName, ...props }) {
 
                 <ProductPrice>
                     <Label>Product Price</Label>
-                    <Input />
+                    <Input
+                        onChange={(e) =>
+                            handleProductPrice(e.target.value.trim())
+                        }
+                        maxLength={8}
+                    />
                 </ProductPrice>
             </fieldset>
             <ProductDescription>
