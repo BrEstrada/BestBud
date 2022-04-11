@@ -14,6 +14,7 @@ function ProductEditor({
     handleProductPrice,
     setProductImage,
     handleProductDescription,
+    handleSubmit,
     ...props
 }) {
     return (
@@ -23,6 +24,7 @@ function ProductEditor({
                 handleProductPrice={handleProductPrice}
                 setProductImage={setProductImage}
                 handleProductDescription={handleProductDescription}
+                handleSubmit={handleSubmit}
             />
             <ProductPreview
                 productName={productName}

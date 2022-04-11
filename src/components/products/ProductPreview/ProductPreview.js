@@ -20,8 +20,8 @@ function ProductPreview({
         <ProductPreviewStyles {...props}>
             <ProductImage>
                 <img
-                    src={productImage}
-                    alt="Product Placeholder"
+                    src={productImage.previewImage}
+                    alt={productName}
                     width="320"
                     height="184"
                 />
