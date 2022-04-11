@@ -16,13 +16,15 @@ function ProductDataEntryForm({
     children,
     handleProductName,
     handleProductPrice,
+    setProductImage,
+    handleProductDescription,
     ...props
 }) {
     return (
         <ProductDataEntryFormStyles {...props}>
             <ProductImage>
                 <Label>Product Image</Label>
-                <ProductImageDropBox />
+                <ProductImageDropBox setProductImage={setProductImage} />
             </ProductImage>
             <fieldset>
                 <ProductName>
@@ -47,7 +49,12 @@ function ProductDataEntryForm({
             </fieldset>
             <ProductDescription>
                 <Label>Product Description</Label>
-                <TextArea rows={6} />
+                <TextArea
+                    rows={6}
+                    onChange={(e) =>
+                        handleProductDescription(e.target.value.trim())
+                    }
+                />
             </ProductDescription>
         </ProductDataEntryFormStyles>
     );

@@ -8,8 +8,12 @@ function ProductEditor({
     children,
     productName,
     productPrice,
+    productImage,
+    productDescription,
     handleProductName,
     handleProductPrice,
+    setProductImage,
+    handleProductDescription,
     ...props
 }) {
     return (
@@ -17,10 +21,14 @@ function ProductEditor({
             <ProductDataEntryForm
                 handleProductName={handleProductName}
                 handleProductPrice={handleProductPrice}
+                setProductImage={setProductImage}
+                handleProductDescription={handleProductDescription}
             />
             <ProductPreview
                 productName={productName}
                 productPrice={productPrice}
+                productImage={productImage}
+                productDescription={productDescription}
             />
         </ProductEditorStyles>
     );
